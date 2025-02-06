@@ -2,6 +2,7 @@ package it.epicode.BE_W5_D4.ordini;
 
 import it.epicode.BE_W5_D4.menu.ElementoMenu;
 import it.epicode.BE_W5_D4.tavoli.Tavolo;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,9 +14,17 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "ordini")
 public class Ordine {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	private Long idOrdine;
+
 	private int numeroOrdine;
+	@ManyToOne
 	private Tavolo tavolo;
+	@OneToOne
 	private StatoOrdine statoOrdine;
 	private int numeroCoperti;
 	private LocalDateTime oraAcquisizione = LocalDateTime.now();

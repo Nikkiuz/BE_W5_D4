@@ -3,6 +3,7 @@ package it.epicode.BE_W5_D4.runners;
 import it.epicode.BE_W5_D4.menu.Menu;
 import it.epicode.BE_W5_D4.ordini.Ordine;
 import it.epicode.BE_W5_D4.ordini.StatoOrdine;
+import it.epicode.BE_W5_D4.repository.OrdineRepository;
 import it.epicode.BE_W5_D4.tavoli.Tavolo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,6 +14,8 @@ import java.util.List;
 
 @Component
 public class ApplicationRunner implements CommandLineRunner {
+	@Autowired
+	private OrdineRepository ordineRepository;
 	@Autowired
 	private Menu menuPranzo;
 	@Value("${costo.coperto}")
@@ -37,5 +40,6 @@ public class ApplicationRunner implements CommandLineRunner {
 			menuPranzo.getElementiMenu().get(2)));
 
 		ordine.stampaOrdine();
+		ordineRepository.save(ordine);
 	}
 }

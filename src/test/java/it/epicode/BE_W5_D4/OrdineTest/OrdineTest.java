@@ -1,12 +1,12 @@
-package it.epicode.BE_W5D1.OrdineTest;
+package it.epicode.BE_W5_D4.OrdineTest;
 
-import it.epicode.BE_W5D1.bevande.Bevanda;
-import it.epicode.BE_W5D1.menu.ElementoMenu;
-import it.epicode.BE_W5D1.ordini.Ordine;
-import it.epicode.BE_W5D1.ordini.StatoOrdine;
-import it.epicode.BE_W5D1.pizze.Pizza;
-import it.epicode.BE_W5D1.tavoli.Tavolo;
-import it.epicode.BE_W5D1.topping.Topping;
+import it.epicode.BE_W5_D4.bevande.Bevanda;
+import it.epicode.BE_W5_D4.menu.ElementoMenu;
+import it.epicode.BE_W5_D4.ordini.Ordine;
+import it.epicode.BE_W5_D4.ordini.StatoOrdine;
+import it.epicode.BE_W5_D4.pizze.Pizza;
+import it.epicode.BE_W5_D4.tavoli.Tavolo;
+import it.epicode.BE_W5_D4.topping.Topping;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

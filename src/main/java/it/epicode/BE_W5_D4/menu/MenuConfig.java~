@@ -29,6 +29,5 @@ public class MenuConfig {
 		m.setElementiMenuPizze(List.of(margherita, marinara, funghiSalsiccia, capricciosa));
 		m.setElementiMenuTopping(List.of(abbondanteMozzarella, salame));
 		return m;
-
 	}
 }

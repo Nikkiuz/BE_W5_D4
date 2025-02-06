@@ -17,6 +17,6 @@ public class Tavolo {
 
 	private int numeroTavolo;
 	private int numeroMaxCoperti;
-	@Enumerated(EnumType.STRING)
+	@OneToOne
 	private StatoTavolo statoTavolo;
 }
